@@ -1,0 +1,24 @@
+def word_count(str):
+"""Count the words and their occurence in a string"""
+
+    counts = dict()
+    words = str.split()
+
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+            
+    return counts     
+    
+    
+    for key, value in counts.items():
+# output the dictonary in a good-looking format
+	      print (key + " " + str(value))
+        
+    
+    
+            
+    
+    
