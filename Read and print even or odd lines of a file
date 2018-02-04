@@ -1,0 +1,14 @@
+fh = open ("C:/Users/zhhxu/Downloads/rosalind_ini5_2.txt", "r")
+i = 1
+for line in fh:
+    if i %2 == 0:
+        print (line)
+    i += 1
+    
+    
+    
+# Another iteration way
+for line in fh.readlines():
+    if i %2 == 0:
+        print (line)
+    i += 1
