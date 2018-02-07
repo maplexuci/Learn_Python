@@ -1,0 +1,12 @@
+s = "adfewadsdsdsbobsdfebobsaserbobsdewbobbobsfewfbob"
+ts = 0
+count = 0
+for i in s:
+    if count+2 < len(s):
+        j = s[count+1]
+        k = s[count+2]
+        count += 1
+        if i+j+k == "bob":
+            ts += 1
+            
+print ("Number of times bob occurs is: " + str(ts))
