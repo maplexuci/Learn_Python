@@ -1,0 +1,28 @@
+ln = 0
+hn = 100
+guess = (ln+hn)//2
+d = 0.01
+ans = ("h", "l", "c")
+print ("Please think of a number between 0 and 100!")
+print ("Is your secret number " + str(guess) + "?")
+r = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+while abs(guess-hn) >= d:
+    if r not in ans:
+        print ("Sorry, I did not understand your input.")
+        print ("Is your secret number " + str(guess) + "?")
+        r = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+    else:
+        if r == "h":
+            hn = guess
+            guess = (ln + hn)//2
+            print ("Is your secret number " + str(guess) + "?")
+            r = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+        elif r == "l":
+            ln = guess
+            guess = (ln + hn)//2
+            print ("Is your secret number " + str(guess) + "?")
+            r = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+        elif r == "c":
+            print ("Game over, Your secret number was: " + str(guess))
+            break
+        
