@@ -1,0 +1,21 @@
+def payDebt(balance, annualInterestRate, monthlyPaymentRate):
+
+    b = balance
+    a = annualInterestRate
+    m = monthlyPaymentRate
+    monthly_interest_rate = (annualInterestRate/12)
+
+    for i in range(1,13):
+	
+	# minimum that should be paid		
+        minimum_monthly_payment = round(m * b, 2)
+    
+        # deducts the min payment from balance
+        monthly_unpaid_balance = round(b - minimum_monthly_payment, 2)
+    
+        # adds interest fees
+        b = round( (b - minimum_monthly_payment) + (monthly_unpaid_balance * monthly_interest_rate), 2)
+
+        print ("Month" + " " + str(i) + " " + "Remaining balance: " + str(b))
+
+    return "Remaining balance: " + str(b)
